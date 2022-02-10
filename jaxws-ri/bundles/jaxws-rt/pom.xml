@@ -24,6 +24,7 @@
 
     <groupId>com.sun.xml.ws</groupId>
     <artifactId>jaxws-rt</artifactId>
+    <version>2.3.5-ufos</version>
     <name>JAX-WS RI Runtime (jaxws-rt)</name>
     <description>JAX-WS Runtime with module descriptor</description>
 

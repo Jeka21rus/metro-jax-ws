@@ -338,6 +338,11 @@ public class ServletConnectionImpl extends WSHTTPConnection implements WebServic
         String host = request.getHeader("X-Forwarded-Host");
         if (host == null) {
             host = request.getHeader("Host");
+        } else {
+            if (!host.contains(":")) {
+                String port = request.getHeader("X-Forwarded-Port");
+                host += ":" + (port != null ? port: request.getServerPort());
+            }
         }
         // Fallback
         if (host == null) {
